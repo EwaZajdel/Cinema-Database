@@ -60,18 +60,18 @@ CREATE TABLE `film` (
 
 INSERT INTO `film` (`IdFilm`, `tytul`, `rezyser`, `rok_wydania`, `rodzaj`, `wiek`, `opis`) VALUES
 (1, 'Kształt wody', 'Guillermo del Toro', 2017, 'Fantasy', 12, 'Elisa Esposito pracuje jako woźna w tajnym rządowym laboratorium. Jej życie ulega nagłej zmianie, gdy odkrywa pilnie strzeżony sekret.'),
-(2, 'Czas mroku', '	Joe Wright', 2017, 'Biograficzny, Dramat historyczny', 12, 'Winston Churchill zostaje premierem Wielkiej Brytanii. Jego pierwszym zadaniem jest zjednoczenie narodu w obliczu groźby inwazji nazistowskich Niemiec.'),
-(3, 'Czwarta władza', 'Steven Spielberg', 2017, 'Dramat, Polityczny', 0, 'Działania prezydenta USA doprowadzają do konfliktu pomiędzy dziennikarzami a rządem.'),
+(2, 'Czas mroku', '	Joe Wright', 2017, 'Biograficzny', 12, 'Winston Churchill zostaje premierem Wielkiej Brytanii. Jego pierwszym zadaniem jest zjednoczenie narodu w obliczu groźby inwazji nazistowskich Niemiec.'),
+(3, 'Czwarta władza', 'Steven Spielberg', 2017, 'Dramat', 0, 'Działania prezydenta USA doprowadzają do konfliktu pomiędzy dziennikarzami a rządem.'),
 (4, 'Tamte dni, tamte noce', 'Luca Guadagnino', 2017, 'Melodramat', 12, 'Nastoletni chłopak zakochuje się w gościu, który przyjechał na wakacje do jego rodziców.'),
-(5, 'Jaskiniowiec', 'Nick Park', 2018, 'Animacja, Komedia, Przygodowy', 0, 'W czasach, kiedy po ziemi chodziły dinozaury i mamuty, dzielny jaskiniowiec jednoczy plemię przeciwko potężnemu wrogowi.'),
-(6, 'Twój Vincent ', 'Dorota Kobiela', 2017, 'Animacja, Dramat, Kryminał', 6, 'Bohaterowie obrazów Vincenta van Gogha przedstawiają historię życia oraz tajemniczej śmierci artysty. '),
+(5, 'Jaskiniowiec', 'Nick Park', 2018, 'Animacja', 0, 'W czasach, kiedy po ziemi chodziły dinozaury i mamuty, dzielny jaskiniowiec jednoczy plemię przeciwko potężnemu wrogowi.'),
+(6, 'Twój Vincent ', 'Dorota Kobiela', 2017, 'Animacja', 6, 'Bohaterowie obrazów Vincenta van Gogha przedstawiają historię życia oraz tajemniczej śmierci artysty. '),
 (7, 'Tomb Raider ', 'Roar Uthaug', 2018, 'Przygodowy', 12, 'Lara Croft wyrusza w swoją pierwszą ekspedycję, aby odnaleźć zaginionego ojca na niezbadanej wyspie u wybrzeży Japonii.'),
 (8, 'Pitbull. Ostatni pies', 'Władysław Pasikowski', 2018, 'Sensacyjny', 15, 'Po śmierci Soczka policjanci z warszawskiej komendy rozpoczynają śledztwo. Na wezwanie komendanta do stolicy przybywają Nielat zwany Quantico, Metyl oraz Despero, którzy mają za zadanie powstrzymać gangi walczące między sobą o miasto. '),
-(9, 'Czerwona jaskółka', 'Francis Lawrence', 2018, 'Thriller, Szpiegowski', 15, 'Młoda Rosjanka wbrew swojej woli odbywa szkolenie, podczas którego uczy się uwodzić szpiegów. Niebawem zostaje wysłana do Finlandii, gdzie musi wydobyć tajne informacje od amerykańskiego wywiadowcy. '),
+(9, 'Czerwona jaskółka', 'Francis Lawrence', 2018, 'Thriller', 15, 'Młoda Rosjanka wbrew swojej woli odbywa szkolenie, podczas którego uczy się uwodzić szpiegów. Niebawem zostaje wysłana do Finlandii, gdzie musi wydobyć tajne informacje od amerykańskiego wywiadowcy. '),
 (10, 'Kobiety mafii', 'Patryk Vega', 2018, 'Sensacyjny', 15, 'Bela, była funkcjonariuszka policji, dostaje od ABW zadanie rozpracowania szajki przestępczej handlującej narkotykami. Aby jej misja się powiodła, musi rozpocząć współpracę z mafią. '),
-(11, 'Cudowny chłopak ', 'Stephen Chbosky', 2017, 'DramatFamilijnyKomedia', 6, 'Auggie od urodzenia ma zdeformowaną twarz. W nowej szkole chłopiec chce udowodnić rówieśnikom, że piękno to więcej niż wygląd.'),
-(12, 'Luis i obcy', 'Wolfgang Lauenstein', 2018, 'Animacja,Familijny', 0, '12-letni Luis czuje się samotny. Nie ma żadnych przyjaciół, a jego ojciec – ufolog Armin – całe noce spędza przy teleskopie, szukając śladów życia w kosmosie.'),
-(13, 'Lady Bird', 'Greta Gerwig', 2017, 'Dramat, Komedia', 12, 'Rok z życia zbuntowanej dziewczyny, która uczy się w katolickim liceum.');
+(11, 'Cudowny chłopak ', 'Stephen Chbosky', 2017, 'Familijny', 6, 'Auggie od urodzenia ma zdeformowaną twarz. W nowej szkole chłopiec chce udowodnić rówieśnikom, że piękno to więcej niż wygląd.'),
+(12, 'Luis i obcy', 'Wolfgang Lauenstein', 2018, 'Animacja', 0, '12-letni Luis czuje się samotny. Nie ma żadnych przyjaciół, a jego ojciec – ufolog Armin – całe noce spędza przy teleskopie, szukając śladów życia w kosmosie.'),
+(13, 'Lady Bird', 'Greta Gerwig', 2017, 'Dramat', 12, 'Rok z życia zbuntowanej dziewczyny, która uczy się w katolickim liceum.');
 
 -- --------------------------------------------------------
 
