@@ -133,8 +133,8 @@ $con=mysqli_connect("localhost","root", "", "kino");
 			<ul>
 				<li><a href="repertuar.php">repertuar</a></li>
 				<li><a href="cennik.php">cennik</a></li>
-				<li><a href="promocje.php">promocje</a></li>
-				<li><a href="news.php">newsy</a></li>
+				<li><a href="budowa.php">promocje</a></li>
+				<li><a href="budowa.php">newsy</a></li>
 			</ul>
 			<hr color="#ffffff", width="800px">
 		</div>
@@ -146,56 +146,56 @@ $con=mysqli_connect("localhost","root", "", "kino");
 		
 
 
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
-			<div class="film"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
+						} ?>"></img></a></div>
+			<div class="film"><a href = "repertuar.php"><img src="<?php $plakat = mysqli_query($con, "SELECT * FROM `film` ORDER BY rand() LIMIT 1;");
 						while($row=mysqli_fetch_array($plakat)){
 							$plakat1 = $row['linki'];
 							echo $plakat1;
-						} ?>"></img></div>
+						} ?>"></img></a></div>
 		</div>
 	
 	</div>
