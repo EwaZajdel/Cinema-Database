@@ -133,8 +133,8 @@ mysqli_query($con, 'SET NAMES utf8');
 			<ul>
 				<li><a href="#" style="color: green">repertuar</a></li>
 				<li><a href="cennik.php">cennik</a></li>
-				<li><a href="promocje.php">promocje</a></li>
-				<li><a href="news.php">newsy</a></li>
+				<li><a href="budowa.php">promocje</a></li>
+				<li><a href="budowa.php">newsy</a></li>
 			</ul>
 			<hr color="#ffffff", width="800px">
 		</div>
@@ -163,6 +163,8 @@ mysqli_query($con, 'SET NAMES utf8');
 				</table>
 		</form>
 		</center>
+		
+		
 		
 		
 		
