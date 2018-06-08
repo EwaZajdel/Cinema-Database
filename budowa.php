@@ -131,37 +131,20 @@ mysqli_query($con, 'SET NAMES utf8');
 		<div id="nav">
 			<hr color="#ffffff", width="800px">
 			<ul>
-				<li><a href="#" style="color: green">repertuar</a></li>
+				<li><a href="repertuar.php" style="color: green">repertuar</a></li>
 				<li><a href="cennik.php">cennik</a></li>
-				<li><a href="budowa.php">promocje</a></li>
-				<li><a href="budowa.php">newsy</a></li>
+				<li><a href="#">promocje</a></li>
+				<li><a href="#">newsy</a></li>
 			</ul>
 			<hr color="#ffffff", width="800px">
 		</div>
 		
 		
 		<center>
-		<form method="GET"> 
-			<h1>Aktualnie gramy:</h1>
-				<table width="600px" border = "1" cellpadding ="1" cellspacing = "1">
-					<tr><td><b>Tytuł</b></td><td><b>Ograniczenie wiekowe</b></td><td><b>Gatunek</b></td></tr>
-					<?php	
-					$seanse = mysqli_query($con, 'SELECT * FROM `film`'); //zrobić tutaj + godzina i przy godzinie typ (dub, PL, ENG)
-					while ($rec = mysqli_fetch_array($seanse))
-					{
-						
-					 echo '<tr>
-					 
-					 <td><a href="repertuar_wybor_daty.php?n1='.$rec['tytul'].'">'.$rec['tytul'].'</a></td>
-					
-					 <td>'.$rec['wiek'].'</td>
-					 <td>'.$rec['rodzaj'].'</td>
-					
-					 </tr>';
-					}
-					?>
-				</table>
-		</form>
+		</br>
+	Strona w budowie. Przepraszamy za niedogodności :)</br></br>
+	Pozdrawiamy,</br>
+	ZESPÓŁ PRACOWNIKÓW KINA MEM ♥
 		</center>
 		
 		

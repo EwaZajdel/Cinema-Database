@@ -1,15 +1,18 @@
 <?php
-$con=mysqli_connect("localhost","root", "", "kino");
-mysqli_query($con, 'SET NAMES utf8');
-
 	session_start();
-?>
+    
+    $wybrane = $_GET['miejsce'];
+    
+    
+    foreach ($wybrane as $miejsce){
+        echo $miejsce."<br />";
+    }
 
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>mem kino</title>
 
 
@@ -71,11 +74,9 @@ mysqli_query($con, 'SET NAMES utf8');
 	{
 		min-height: 240px;
 		width: 170px;
-		float: left;
 		margin: 13px;
-		background-color: #3F306D;
-		align: center;
-	}
+		background-color: #3F306D;}
+		
 	
 	li {
 		display: inline;
@@ -95,34 +96,66 @@ mysqli_query($con, 'SET NAMES utf8');
 		
 	#footer {
 		clear: both;
-		text-align: center;}
-		
-	h1 {
 		text-align: center;}	
 		
-	option {
-		heigh: 300px;
-		text-align: center;}
+	.film img
+	{
+		display: block; 
+		margin: 0 auto;
+		width: 170px;
+		height: 240px;
+		-webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease;}
+	
+	.film img:hover 
+	{
+		-o-transition: all 0.6s;
+		-moz-transition: all 0.6s;
+		-webkit-transition: all 0.6s;
+		-moz-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-webkit-filter: brightness(115%);
+		filter: brightness(115%);
+		cursor: pointer;}
 		
-	select {
+	.logowanie {
+		align: center;
+		margin: 20px;
+		}
+		
+	label {
+		<!--display: block;-->
+		padding: 10px 20px;
+		font-size: 20px;}
+
+	input {
 		width: 300px;
 		height: 30px;
-		float: center;
-		font-family: Century Gothic;
-		font-size: 15px;
-		margin-left: 20px;}
+		font-size: 16px;
+		font-family: Century Gothic;}
 		
-	#przyciski {
-		clear: both;
-		margin-left: auto;
-		margin-right: auto;}
+	#content {
+		margin-left: 150px;
+		margin-top: 50px;
+		font-size: 20px;}
+		
+	#main {
+		float:left;
+		max-width: 400px;}
+		
+	#side {
+		float: right;
+		margin-right: 100px;
+		margin-top: 0px;
+		text-align: center;
+		font-size: 24px;}S
 </style>
 
 </head>
 <body>
-		<div id="login">
-			<a href="logowanie.php"><b>logowanie</b></a>
-		</div>
+	<div id="login">
+		<a href="logowanie.php"><b>logowanie</b></a>
+	</div>
 	<div id="container">
 		<div id="logo">
 			<a href="mem.php"><img src="logo1.png"  height="90px" alt="Tu podaj tekst alternatywny" /></a>
@@ -131,44 +164,31 @@ mysqli_query($con, 'SET NAMES utf8');
 		<div id="nav">
 			<hr color="#ffffff", width="800px">
 			<ul>
-				<li><a href="#" style="color: green">repertuar</a></li>
+				<li><a href="repertuar.php">repertuar</a></li>
 				<li><a href="cennik.php">cennik</a></li>
-				<li><a href="budowa.php">promocje</a></li>
-				<li><a href="budowa.php">newsy</a></li>
+				<li><a href="promocje.php">promocje</a></li>
+				<li><a href="news.php">newsy</a></li>
 			</ul>
 			<hr color="#ffffff", width="800px">
 		</div>
-		
-		
-		<center>
-		<form method="GET"> 
-			<h1>Aktualnie gramy:</h1>
-				<table width="600px" border = "1" cellpadding ="1" cellspacing = "1">
-					<tr><td><b>Tytuł</b></td><td><b>Ograniczenie wiekowe</b></td><td><b>Gatunek</b></td></tr>
-					<?php	
-					$seanse = mysqli_query($con, 'SELECT * FROM `film`'); //zrobić tutaj + godzina i przy godzinie typ (dub, PL, ENG)
-					while ($rec = mysqli_fetch_array($seanse))
-					{
-						
-					 echo '<tr>
-					 
-					 <td><a href="repertuar_wybor_daty.php?n1='.$rec['tytul'].'">'.$rec['tytul'].'</a></td>
-					
-					 <td>'.$rec['wiek'].'</td>
-					 <td>'.$rec['rodzaj'].'</td>
-					
-					 </tr>';
-					}
-					?>
-				</table>
-		</form>
-		</center>
-		
-		
-		
-		
-		
-	</div>
+		<div id="content">
+			<div id="main">
+				Film dodano pomyślnie</br>
+				<b>Id filmu: 123</b></br>
+			</div>
+			
+			<div id="side">
+				Film został dodany do bazy:</br>
+				TYTUŁ</br>
+				REŻYSER</br>
+				ROK WYDANIA</br>
+				RODZAJ</br>
+				WIEK</br>
+			</div>
+		</div>
+
+</div>
+
 
 	<div id="dol">
 		<ul>

@@ -1,15 +1,22 @@
 <?php
-$con=mysqli_connect("localhost","root", "", "kino");
-mysqli_query($con, 'SET NAMES utf8');
 
 	session_start();
+	
+	if (!isset($_SESSION['zalogowany']))
+	{
+		header('Location: logowanie.php');
+		exit();
+	}
+	$con=mysqli_connect("localhost","root", "", "kino");
+	mysqli_query($con, 'SET NAMES utf8');
+	
+
 ?>
 
-
+	
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>mem kino</title>
 
 
@@ -58,7 +65,7 @@ mysqli_query($con, 'SET NAMES utf8');
 		clear: both;
 		color: #ffffff;
 		text-align: center;
-		font-size: 32px;
+		font-size: 25px;
 	}
 
 	#wiersz {
@@ -99,50 +106,45 @@ mysqli_query($con, 'SET NAMES utf8');
 		
 	h1 {
 		text-align: center;}	
-		
-	option {
-		heigh: 300px;
-		text-align: center;}
-		
-	select {
-		width: 300px;
-		height: 30px;
-		float: center;
-		font-family: Century Gothic;
-		font-size: 15px;
-		margin-left: 20px;}
-		
-	#przyciski {
-		clear: both;
-		margin-left: auto;
-		margin-right: auto;}
 </style>
 
 </head>
 <body>
 		<div id="login">
-			<a href="logowanie.php"><b>logowanie</b></a>
+			<a href="wyloguj.php"><b>wyloguj się</b></a>
 		</div>
 	<div id="container">
+	
+
+		
 		<div id="logo">
-			<a href="mem.php"><img src="logo1.png"  height="90px" alt="Tu podaj tekst alternatywny" /></a>
+			<a href="#"><img src="logo1.png"  height="90px" alt="Tu podaj tekst alternatywny" /></a>
 		</div>
 		
 		<div id="nav">
 			<hr color="#ffffff", width="800px">
 			<ul>
-				<li><a href="#" style="color: green">repertuar</a></li>
-				<li><a href="cennik.php">cennik</a></li>
-				<li><a href="budowa.php">promocje</a></li>
-				<li><a href="budowa.php">newsy</a></li>
+				<li><a href="#" style="color: green">nowy bilet</a></li>
+				<li><a href="baza_biletow.php">bilet-klient</a></li>
+				<li><a href="bilety_sprzedane.php">bilet-pracownik</a></li></br>
+				<li><a href="dodanie_filmu.php">dodaj film</a></li>
+				<li><a href="dodanie_seansu.php">dodaj seans</a></li>
+				<li><a href="admin_dodanie_pracownika.php">dodaj pracownika</a></li>
 			</ul>
 			<hr color="#ffffff", width="800px">
 		</div>
 		
+		<!-- REPERTUAR Z BAZY DANYCH 
 		
-		<center>
-		<form method="GET"> 
-			<h1>Aktualnie gramy:</h1>
+		
+		Widok Seanse-->
+	<center>	
+<form method="GET"> 
+
+<?php
+			echo "<p>Witaj ".$_SESSION['user']."!</p>";
+			echo "Twoje ID to: ".$_SESSION['IdPracownik']."";
+		?>
 				<table width="600px" border = "1" cellpadding ="1" cellspacing = "1">
 					<tr><td><b>Tytuł</b></td><td><b>Ograniczenie wiekowe</b></td><td><b>Gatunek</b></td></tr>
 					<?php	
@@ -152,7 +154,7 @@ mysqli_query($con, 'SET NAMES utf8');
 						
 					 echo '<tr>
 					 
-					 <td><a href="repertuar_wybor_daty.php?n1='.$rec['tytul'].'">'.$rec['tytul'].'</a></td>
+					 <td><a href="pracownik_repertuar_wybor_daty.php?n1='.$rec['tytul'].'">'.$rec['tytul'].'</a></td>
 					
 					 <td>'.$rec['wiek'].'</td>
 					 <td>'.$rec['rodzaj'].'</td>
@@ -163,24 +165,12 @@ mysqli_query($con, 'SET NAMES utf8');
 				</table>
 		</form>
 		</center>
-		
-		
-		
-		
-		
 	</div>
 
-	<div id="dol">
-		<ul>
-			<li1><a href="#">kontakt</a></li1>
-			<li1><a href="#">o nas</a></li1>
-			<li1><a href="#">informacje</a></li1>
-		</ul>
 
-	</div>
 		
 	<div id="footer">
-		 Wszystkie prawa zastrzeżone Kino Mem 2018 &copy;
+		 </br>Wszystkie prawa zastrzeżone Kino Mem 2018 &copy;
 	</div>
 	
 </body>
